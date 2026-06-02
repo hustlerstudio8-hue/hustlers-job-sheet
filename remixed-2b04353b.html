@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Hustlers Car Studio — Job Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #C8102E;
+  --red-dark: #9a0c22;
+  --red-light: #FAECE7;
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --bg: #f5f4f2;
+  --surface: #ffffff;
+  --surface2: #f8f7f5;
+  --border: rgba(0,0,0,0.1);
+  --border-strong: rgba(0,0,0,0.18);
+  --text: #111111;
+  --text2: #555555;
+  --text3: #888888;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { background: var(--bg); }
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* ── HEADER ── */
+.header {
+  background: var(--black);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.header-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.header-logo { display: flex; align-items: center; gap: 10px; }
+.logo-mark {
+  width: 38px; height: 38px;
+  background: var(--red);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px; color: #fff; flex-shrink: 0;
+}
+.logo-text { color: #fff; }
+.logo-name { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1.5px; line-height: 1; }
+.logo-sub { font-size: 10px; color: var(--red); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; margin-top: 1px; }
+.header-contact { text-align: right; font-size: 10px; color: rgba(255,255,255,0.4); line-height: 1.7; }
+
+/* ── PROGRESS ── */
+.progress-section {
+  background: var(--black);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 0 20px 14px;
+}
+.progress-wrap { max-width: 700px; margin: 0 auto; }
+.step-bar { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 10px; }
+.step-pill {
+  background: rgba(255,255,255,0.07);
+  border-radius: 6px;
+  padding: 7px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+.step-pill.active { background: var(--red); border-color: var(--red); }
+.step-pill.done { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.15); }
+.step-label { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.5); line-height: 1.3; }
+.step-pill.active .step-label, .step-pill.done .step-label { color: #fff; }
+.step-num-label { font-size: 9px; color: rgba(255,255,255,0.3); letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 1px; }
+.step-pill.active .step-num-label { color: rgba(255,255,255,0.7); }
+.step-pill.done .step-num-label { color: rgba(255,255,255,0.45); }
+.prog-track { height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; }
+.prog-fill { height: 100%; background: var(--red); border-radius: 2px; transition: width 0.4s ease; width: 33.3%; }
+
+/* ── MAIN CONTENT ── */
+.main { max-width: 700px; margin: 0 auto; padding: 20px 16px 40px; }
+
+/* ── CARDS ── */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 14px;
+}
+.card-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+.card-label::before { content: ''; display: block; width: 14px; height: 2px; background: var(--red); border-radius: 1px; }
+.card-label svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* ── FORM ELEMENTS ── */
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
+.fg { display: flex; flex-direction: column; gap: 5px; }
+.fg label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text2);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.req { color: var(--red); margin-left: 2px; }
+.fg input, .fg select, .fg textarea {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px 12px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(200,16,46,0.1);
+  background: #fff;
+}
+.fg select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+.fg textarea { resize: vertical; min-height: 72px; }
+.err { font-size: 11px; color: var(--red); margin-top: 3px; display: none; }
+.err.show { display: block; }
+.mt10 { margin-top: 12px; }
+.mt6 { margin-top: 8px; }
+
+/* ── DAMAGE ZONES ── */
+.dmg-legend { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+.dl { font-size: 10px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 3px 8px; color: var(--text3); font-weight: 500; }
+.zones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.zone-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px; }
+.zone-title { font-size: 11px; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 9px; display: flex; align-items: center; gap: 6px; }
+.zone-title::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+.code-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.ctag {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 600;
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 6px; padding: 3px 8px;
+  cursor: pointer; color: var(--text2);
+  transition: all 0.12s; user-select: none;
+}
+.ctag:hover { border-color: var(--red); color: var(--red); }
+.ctag.on { background: var(--red-light); border-color: var(--red); color: var(--red-dark); font-weight: 700; }
+.ctag input { display: none; }
+
+/* ── SERVICES ── */
+.svc-cat { margin-bottom: 8px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+.cat-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--surface2);
+  padding: 12px 14px; cursor: pointer;
+  transition: background 0.15s;
+}
+.cat-hdr:hover { background: #f0efed; }
+.cat-hdr.open { background: var(--black); }
+.cat-title { font-size: 13px; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.cat-hdr.open .cat-title { color: #fff; }
+.cat-icon { width: 28px; height: 28px; background: rgba(200,16,46,0.12); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cat-hdr.open .cat-icon { background: rgba(255,255,255,0.15); }
+.cat-icon svg { width: 14px; height: 14px; color: var(--red); }
+.cat-hdr.open .cat-icon svg { color: #fff; }
+.cat-badge { background: var(--red); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 100px; display: none; }
+.cat-hdr.open .cat-badge { background: rgba(255,255,255,0.25); color: #fff; }
+.cat-chev { width: 16px; height: 16px; color: var(--text3); transition: transform 0.25s; flex-shrink: 0; }
+.cat-hdr.open .cat-chev { transform: rotate(180deg); color: rgba(255,255,255,0.6); }
+.cat-body { display: none; background: #fff; }
+.cat-body.open { display: block; }
+.svc-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 11px 14px; border-bottom: 1px solid var(--border);
+  transition: background 0.1s; cursor: pointer;
+}
+.svc-row:last-child { border-bottom: none; }
+.svc-row:hover { background: var(--surface2); }
+.svc-row.checked { background: #fff9f9; }
+.svc-l { display: flex; align-items: flex-start; gap: 10px; flex: 1; }
+.svc-cb { width: 16px; height: 16px; accent-color: var(--red); cursor: pointer; flex-shrink: 0; margin-top: 2px; }
+.svc-n { font-size: 13px; font-weight: 600; color: var(--text); }
+.svc-s { font-size: 11px; color: var(--text3); margin-top: 1px; }
+.svc-p { font-size: 13px; font-weight: 700; color: var(--red); white-space: nowrap; margin-left: 10px; }
+
+/* ── BILLING ── */
+.billing-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin-top: 12px; }
+.total-line { display: flex; justify-content: space-between; align-items: center; font-size: 13px; padding: 5px 0; border-bottom: 1px solid var(--border); }
+.total-line:last-child { border-bottom: none; font-weight: 700; font-size: 15px; }
+.total-line.sub, .total-line.gst { color: var(--text2); }
+.total-line.grand { color: var(--text); }
+.total-line.grand span:last-child { color: var(--red); }
+
+/* ── T&C ── */
+.tc-scroll {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px;
+  max-height: 220px; overflow-y: auto;
+  font-size: 11px; color: var(--text2); line-height: 1.7;
+  margin-bottom: 14px;
+}
+.tc-scroll h4 { font-size: 11px; font-weight: 700; color: var(--text); margin: 12px 0 5px; text-transform: uppercase; letter-spacing: 0.8px; }
+.tc-scroll h4:first-child { margin-top: 0; }
+.tc-scroll ul { padding-left: 1.2rem; margin-bottom: 6px; }
+.tc-scroll li { margin-bottom: 2px; }
+.agree-row {
+  display: flex; align-items: flex-start; gap: 11px;
+  padding: 12px 14px; background: var(--surface2);
+  border: 1px solid var(--border); border-radius: 10px;
+  margin-bottom: 8px; cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.agree-row:hover { border-color: var(--red); background: var(--red-light); }
+.agree-row.checked { border-color: var(--red); background: var(--red-light); }
+.agree-cb { width: 16px; height: 16px; accent-color: var(--red); cursor: pointer; flex-shrink: 0; margin-top: 2px; }
+.agree-txt { font-size: 12px; color: var(--text); line-height: 1.55; }
+.agree-txt em { color: var(--red); font-style: normal; font-weight: 600; }
+
+/* ── SIGNATURE ── */
+.sig-wrap {
+  background: var(--surface2); border: 2px dashed var(--border-strong);
+  border-radius: 10px; position: relative; overflow: hidden;
+  margin-bottom: 10px; cursor: crosshair;
+}
+.sig-wrap canvas { display: block; width: 100%; }
+.sig-hint {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-size: 12px; color: var(--text3); pointer-events: none;
+  white-space: nowrap; display: flex; align-items: center; gap: 6px;
+}
+.sig-clear {
+  font-size: 11px; color: var(--red); background: none; border: none;
+  cursor: pointer; font-family: 'DM Sans', sans-serif;
+  text-decoration: underline; margin-bottom: 10px; display: flex;
+  align-items: center; gap: 4px; font-weight: 500;
+}
+
+/* ── NAV BUTTONS ── */
+.nav-row { display: flex; gap: 10px; margin-top: 20px; }
+.btn-back {
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 13px 20px; font-family: 'DM Sans', sans-serif;
+  font-size: 14px; cursor: pointer; flex-shrink: 0;
+  font-weight: 500; transition: background 0.15s;
+  display: flex; align-items: center; gap: 6px;
+}
+.btn-back:hover { background: var(--surface2); }
+.btn-next {
+  flex: 1; background: var(--red); color: #fff;
+  border: none; border-radius: 10px;
+  padding: 13px; font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: opacity 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+}
+.btn-next:hover { opacity: 0.88; }
+.btn-submit {
+  flex: 1; background: var(--black); color: #fff;
+  border: none; border-radius: 10px;
+  padding: 13px; font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: opacity 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+}
+.btn-submit:hover { opacity: 0.85; }
+.btn-submit.loading { opacity: 0.65; cursor: not-allowed; }
+
+/* ── SPINNER ── */
+.spin {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff; border-radius: 50%;
+  animation: spin 0.7s linear infinite; flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── SUCCESS ── */
+.success-wrap { display: none; padding: 20px 0; }
+.success-wrap.show { display: block; }
+.success-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow);
+  padding: 32px 24px; text-align: center;
+}
+.tick-circle {
+  width: 64px; height: 64px; background: var(--black);
+  border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; margin: 0 auto 18px;
+}
+.tick-circle svg { width: 28px; height: 28px; color: #fff; }
+.success-title { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 1px; color: var(--black); margin-bottom: 8px; }
+.success-sub { font-size: 13px; color: var(--text2); line-height: 1.65; margin-bottom: 22px; max-width: 360px; margin-left: auto; margin-right: auto; }
+.order-badge {
+  display: inline-block; background: var(--red); color: #fff;
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px;
+  letter-spacing: 2px; padding: 4px 18px; border-radius: 100px;
+  margin-bottom: 20px;
+}
+.summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; text-align: left; }
+.sum-item { background: var(--surface2); border-radius: 8px; padding: 10px 12px; }
+.sum-lbl { font-size: 10px; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+.sum-val { font-size: 13px; font-weight: 600; color: var(--text); }
+.btn-sheets {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: #34A853; color: #fff; border: none; border-radius: 10px;
+  padding: 13px; font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 600; cursor: pointer; width: 100%;
+  margin-bottom: 10px; transition: opacity 0.15s; text-decoration: none;
+}
+.btn-sheets:hover { opacity: 0.88; }
+.btn-new {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  width: 100%; background: var(--surface2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px; font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 500; cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-new:hover { background: #ececec; }
+
+/* ── TOAST ── */
+.toast {
+  background: var(--red-light); border: 1px solid rgba(200,16,46,0.25);
+  border-radius: 10px; padding: 11px 14px; font-size: 12px;
+  color: var(--red-dark); margin-bottom: 12px;
+  display: none; align-items: center; gap: 8px;
+  font-weight: 500;
+}
+.toast.show { display: flex; }
+.toast svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 520px) {
+  .grid2, .grid3, .grid4 { grid-template-columns: 1fr; }
+  .zones-grid { grid-template-columns: 1fr; }
+  .summary-grid { grid-template-columns: 1fr; }
+  .header-contact { display: none; }
+  .main { padding: 16px 12px 40px; }
+  .card { padding: 16px; }
+}
+@media (max-width: 380px) {
+  .logo-name { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <div class="logo-mark">H</div>
+      <div class="logo-text">
+        <div class="logo-name">Hustlers Car Studio</div>
+        <div class="logo-sub">Digital Job Sheet</div>
+      </div>
+    </div>
+    <div class="header-contact">
+      U29/121 Kerry Rd, Archerfield QLD 4108<br>
+      0451 047 476 &nbsp;·&nbsp; hustlerscarstudio@gmail.com
+    </div>
+  </div>
+  <div class="progress-section">
+    <div class="progress-wrap">
+      <div class="step-bar">
+        <div class="step-pill active" id="sp1" onclick="jumpTo(1)">
+          <span class="step-num-label">Step 1</span>
+          <span class="step-label">Customer & Vehicle</span>
+        </div>
+        <div class="step-pill" id="sp2" onclick="jumpTo(2)">
+          <span class="step-num-label">Step 2</span>
+          <span class="step-label">Vehicle Damage</span>
+        </div>
+        <div class="step-pill" id="sp3" onclick="jumpTo(3)">
+          <span class="step-num-label">Step 3</span>
+          <span class="step-label">Services & Sign</span>
+        </div>
+      </div>
+      <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <span id="toastMsg">Please fill in all required fields.</span>
+  </div>
+
+  <!-- ═══ PAGE 1: CUSTOMER & VEHICLE ═══ -->
+  <div id="page1">
+
+    <div class="card">
+      <div class="card-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Customer information
+      </div>
+      <div class="grid2">
+        <div class="fg">
+          <label>Client name <span class="req">*</span></label>
+          <input type="text" id="clientName" placeholder="Full name" autocomplete="name">
+          <div class="err" id="e-clientName">Please enter client name</div>
+        </div>
+        <div class="fg">
+          <label>Order no. <span style="font-size:10px;color:var(--text3);text-transform:none;letter-spacing:0">(auto if blank)</span></label>
+          <input type="text" id="orderNo" placeholder="e.g. JOB-001">
+        </div>
+        <div class="fg">
+          <label>Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" placeholder="04XX XXX XXX" autocomplete="tel">
+          <div class="err" id="e-phone">Please enter phone number</div>
+        </div>
+        <div class="fg">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="name@email.com" autocomplete="email">
+          <div class="err" id="e-email">Please enter email address</div>
+        </div>
+        <div class="fg">
+          <label>Car registration <span class="req">*</span></label>
+          <input type="text" id="regNo" placeholder="ABC123" autocomplete="off">
+          <div class="err" id="e-regNo">Please enter registration</div>
+        </div>
+        <div class="fg">
+          <label>Driver's licence no.</label>
+          <input type="text" id="licNo" placeholder="Licence number" autocomplete="off">
+        </div>
+        <div class="fg">
+          <label>Loan car rego</label>
+          <input type="text" id="loanCar" placeholder="If applicable" autocomplete="off">
+        </div>
+        <div class="fg">
+          <label>Driver name (if different)</label>
+          <input type="text" id="driverName" placeholder="Driver full name" autocomplete="off">
+        </div>
+        <div class="fg">
+          <label>Date & time taken</label>
+          <input type="datetime-local" id="dateTaken">
+        </div>
+        <div class="fg">
+          <label>Date & time received</label>
+          <input type="datetime-local" id="dateReceived">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="20" r="1"/><circle cx="20" cy="20" r="1"/></svg>
+        Vehicle details
+      </div>
+      <div class="grid3">
+        <div class="fg">
+          <label>Year <span class="req">*</span></label>
+          <input type="number" id="year" placeholder="2024" min="1990" max="2030">
+          <div class="err" id="e-year">Required</div>
+        </div>
+        <div class="fg">
+          <label>Make <span class="req">*</span></label>
+          <input type="text" id="make" placeholder="Toyota">
+          <div class="err" id="e-make">Required</div>
+        </div>
+        <div class="fg">
+          <label>Model <span class="req">*</span></label>
+          <input type="text" id="model" placeholder="Hilux">
+          <div class="err" id="e-model">Required</div>
+        </div>
+      </div>
+      <div class="grid4 mt10">
+        <div class="fg">
+          <label>Colour</label>
+          <input type="text" id="color" placeholder="Gloss Black">
+        </div>
+        <div class="fg">
+          <label>Mileage (km)</label>
+          <input type="number" id="mileage" placeholder="45000">
+        </div>
+        <div class="fg">
+          <label>Plate no.</label>
+          <input type="text" id="plate" placeholder="QLD ABC123">
+        </div>
+        <div class="fg">
+          <label>Interior condition</label>
+          <select id="intCond">
+            <option value="">Select</option>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Fair</option>
+            <option>Poor</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg mt10">
+        <label>VIN number</label>
+        <input type="text" id="vin" placeholder="17-character VIN number" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="nav-row">
+      <button class="btn-next" onclick="next(1)">
+        Next: Vehicle damage
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE 2: DAMAGE ═══ -->
+  <div id="page2" style="display:none">
+
+    <div class="card">
+      <div class="card-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Pre-existing vehicle damage
+      </div>
+      <p style="font-size:12px;color:var(--text2);line-height:1.65;margin-bottom:14px">Record all pre-existing damage before the vehicle is accepted. Tap each code that applies per zone. This protects Hustlers from future liability claims.</p>
+
+      <div class="dmg-legend">
+        <span class="dl">B — Bent</span><span class="dl">BR — Broken</span><span class="dl">C — Cut</span><span class="dl">CR — Cracked</span><span class="dl">D — Dent</span><span class="dl">F — Faded</span><span class="dl">G — Gouged</span><span class="dl">HD — Hail damage</span><span class="dl">L — Loose</span><span class="dl">M — Missing</span><span class="dl">PC — Paint chipped</span><span class="dl">RU — Rust</span><span class="dl">S — Scratch</span><span class="dl">SL — Soiled</span><span class="dl">ST — Stained</span>
+      </div>
+
+      <div class="zones-grid" id="zonesGrid"></div>
+
+      <div class="fg">
+        <label>Additional damage notes</label>
+        <textarea id="dmgNotes" placeholder="Describe any other pre-existing damage not captured above (location, size, severity)..."></textarea>
+      </div>
+      <div class="grid2 mt10">
+        <div class="fg">
+          <label>Inspected by (staff name)</label>
+          <input type="text" id="staffName" placeholder="Staff full name">
+        </div>
+        <div class="fg">
+          <label>Customer present?</label>
+          <select id="custPresent">
+            <option value="">Select</option>
+            <option>Yes — customer signed off</option>
+            <option>No — photos taken</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo(1)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </button>
+      <button class="btn-next" onclick="next(2)">
+        Next: Services & sign
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE 3: SERVICES & SIGN ═══ -->
+  <div id="page3" style="display:none">
+
+    <div class="card">
+      <div class="card-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Services requested
+      </div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:14px;line-height:1.5">Tap a category to expand it, then tick all services the customer is booking.</p>
+      <div id="svcList"></div>
+      <div class="fg mt10">
+        <label>Service notes / special requests</label>
+        <textarea id="svcNotes" placeholder="Colour choices, specific package details, custom requests..."></textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Billing
+      </div>
+      <div class="grid2">
+        <div class="fg">
+          <label>Subtotal (A$)</label>
+          <input type="number" id="subtotal" placeholder="0.00" step="0.01" oninput="calcGST()">
+        </div>
+        <div class="fg">
+          <label>Payment method</label>
+          <select id="payMethod">
+            <option value="">Select method</option>
+            <option>Cash</option>
+            <option>Card (EFTPOS)</option>
+            <option>Bank transfer</option>
+            <option>Afterpay</option>
+            <option>Zip Pay</option>
+            <option>Invoice — 7 days</option>
+            <option>Invoice — 30 days</option>
+          </select>
+        </div>
+      </div>
+      <div class="billing-box" id="billingBox" style="display:none">
+        <div class="total-line sub"><span>Subtotal</span><span id="t-sub">A$0.00</span></div>
+        <div class="total-line gst"><span>GST (10%)</span><span id="t-gst">A$0.00</span></div>
+        <div class="total-line grand"><span>Total</span><span id="t-total">A$0.00</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Terms & conditions
+      </div>
+      <div class="tc-scroll">
+        <h4>Care for wrap or PPF</h4>
+        <ul>
+          <li>Hand-wash only with pH neutral soap after installation.</li>
+          <li>Do not pressure-wash your vehicle wrap or PPF.</li>
+          <li>Avoid de-greasers or agents that may harm the wrap or PPF.</li>
+          <li>Do not use soap with wax or detailing chemicals mixed in.</li>
+          <li>Dry with a clean microfiber towel only. Never use an automatic vehicle wash.</li>
+          <li>Best results on vehicles less than 5 years old with factory paint. Repair damage prior to installation.</li>
+        </ul>
+        <h4>Window film care</h4>
+        <p>Window tint may appear hazy or show moisture bubbles for up to 30 days after installation. Do not clean the film for 6 days. Keep windows closed for 48–72 hours after installation. Minor trapped particles are industry-standard and concurrent with best practice.</p>
+        <h4>Ceramic coating care</h4>
+        <ul>
+          <li>Wait 7 days before washing. Hand wash only — no automatic washes.</li>
+          <li>Use pH-neutral soap and the two-bucket method with microfiber towels only.</li>
+          <li>No high-pressure washers directly on coated surfaces.</li>
+          <li>Reapply a ceramic spray every 3–6 months to maintain warranty.</li>
+        </ul>
+        <h4>Client responsibilities</h4>
+        <p>Inspect vehicle before leaving — Hustlers is not liable for issues after departure. Remove all personal items. Hustlers is not responsible for theft or damage to vehicles parked outside the garage or after key collection. Follow care guide or warranty will be void.</p>
+        <h4>Disassembly & reassembly</h4>
+        <p>Limited disassembly of body panels, bumpers, doors, hoods or trunks may be required. Clips and tabs may crack in rare cases. Hustlers Car Studio IS NOT responsible for resetting or clearing error codes triggered by panel removal. Warning light clearance is the customer's sole responsibility.</p>
+        <h4>Limitation of liability</h4>
+        <p>Hustlers Car Studio's liability is limited to the direct purchase price paid. Hustlers excludes all liability for any punitive, indirect, incidental or consequential damages. Hustlers cannot guarantee a vehicle wrap or PPF will not affect paint — by proceeding you waive any claims to paint damage from installation.</p>
+        <h4>Disclaimer — no refund policy</h4>
+        <p>All Sales Are Final. No Refund policy applies. Pre-existing damage is not covered under warranty. Any wrongfully charged-back amounts will be pursued through civil action in a court of law. Minor imperfections, air pockets, contaminants, and colour variations are industry-standard and do not constitute a defect.</p>
+      </div>
+
+      <div class="agree-row" id="ar1" onclick="togAgree('a1','ar1')">
+        <input type="checkbox" id="a1" class="agree-cb" onclick="event.stopPropagation()">
+        <div class="agree-txt">I have read and agree to the <em>Terms & Conditions, Care Instructions and Client Responsibilities</em> as stated above.</div>
+      </div>
+      <div class="agree-row" id="ar2" onclick="togAgree('a2','ar2')">
+        <input type="checkbox" id="a2" class="agree-cb" onclick="event.stopPropagation()">
+        <div class="agree-txt">I confirm all <em>pre-existing damage</em> has been noted on this form. Hustlers Car Studio is not liable for any pre-existing damage.</div>
+      </div>
+      <div class="agree-row" id="ar3" onclick="togAgree('a3','ar3')">
+        <input type="checkbox" id="a3" class="agree-cb" onclick="event.stopPropagation()">
+        <div class="agree-txt">I understand and accept the <em>No Refund policy</em> and Limitation of Liability described above.</div>
+      </div>
+      <div class="err" id="e-agree" style="margin:4px 0 8px">Please tick all three boxes before submitting.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+        Customer signature
+      </div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:10px">Sign in the box below using your mouse or finger.</p>
+      <div class="sig-wrap" id="sigWrap">
+        <canvas id="sigCanvas" height="90" style="display:block;width:100%"></canvas>
+        <span class="sig-hint" id="sigHint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          Sign here
+        </span>
+      </div>
+      <button class="sig-clear" onclick="clearSig()">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+        Clear signature
+      </button>
+      <div class="grid2">
+        <div class="fg">
+          <label>Signed by — print name <span class="req">*</span></label>
+          <input type="text" id="sigName" placeholder="Full name">
+          <div class="err" id="e-sigName">Required</div>
+        </div>
+        <div class="fg">
+          <label>Date</label>
+          <input type="date" id="sigDate">
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo(2)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </button>
+      <button class="btn-submit" id="submitBtn" onclick="submitForm()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Submit to Google Sheets
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══ SUCCESS ═══ -->
+  <div class="success-wrap" id="successWrap">
+    <div class="success-card">
+      <div class="tick-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="success-title">Job Sheet Submitted</div>
+      <div class="success-sub">Record saved to your Google Sheet. A summary email has been sent to hustlerscarstudio@gmail.com</div>
+      <div class="order-badge" id="successOrderNo">JOB-000000</div>
+      <div class="summary-grid" id="sumGrid"></div>
+      <a class="btn-sheets" href="https://docs.google.com/spreadsheets/d/1Y95BsPiKyJhpBWBcQVg1ssKMYCidSjs5rFjlO5rxuoo/edit" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Open Google Sheet — Hustlers Job Log
+      </a>
+      <button class="btn-new" onclick="resetAll()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Submit another job sheet
+      </button>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────────────────────
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxgtM7O36VTIUrWO0YPH7xueiJAwKFo-6mgxJELZhs3wMwdW_7-HReCkAlU3FVI5LKA/exec';
+
+// ── DAMAGE ZONES ─────────────────────────────────────────────────────────────
+const DMG_CODES = ['B','BR','C','CR','D','F','G','HD','L','M','PC','RU','S','SL','ST'];
+const ZONES = [
+  { id:'front',    label:'Front'          },
+  { id:'rear',     label:'Rear'           },
+  { id:'driver',   label:'Driver side'    },
+  { id:'pass',     label:'Passenger side' },
+  { id:'roof',     label:'Roof'           },
+  { id:'interior', label:'Interior'       },
+];
+
+const zonesGrid = document.getElementById('zonesGrid');
+ZONES.forEach(z => {
+  const div = document.createElement('div');
+  div.className = 'zone-card';
+  div.innerHTML = `<div class="zone-title">${z.label}</div>
+    <div class="code-tags">${DMG_CODES.map(c => `<label class="ctag" id="ctag-${z.id}-${c}">
+      <input type="checkbox" value="${c}" onchange="tagToggle(this,'${z.id}','${c}')"> ${c}
+    </label>`).join('')}</div>`;
+  zonesGrid.appendChild(div);
+});
+
+function tagToggle(cb, zone, code) {
+  document.getElementById(`ctag-${zone}-${code}`).classList.toggle('on', cb.checked);
+}
+function getZoneDmg() {
+  const parts = [];
+  ZONES.forEach(z => {
+    const selected = DMG_CODES.filter(c => {
+      const cb = document.querySelector(`#ctag-${z.id}-${c} input`);
+      return cb && cb.checked;
+    });
+    if (selected.length) parts.push(`${z.label}: ${selected.join(', ')}`);
+  });
+  return parts.join(' | ');
+}
+
+// ── SERVICES ─────────────────────────────────────────────────────────────────
+const SVCS = [
+  { cat:'New Car Protection', items:[
+    {n:'Urban Shield',          s:'Ceramic + IR tint + interior · 2 days',          p:'$1,699'},
+    {n:'Street Armour',         s:'+ headlights & B-pillar PPF · 3 days',           p:'$1,999'},
+    {n:'Elite Frontline',       s:'+ front bumper & bonnet PPF · 4 days',           p:'$2,999'},
+    {n:'Performance Pro',       s:'+ front fenders PPF · 4–5 days',                 p:'$3,699'},
+    {n:'EV Invincible',         s:'Full body PPF + ceramic · 5–7 days',             p:'$4,599'},
+  ]},
+  { cat:'Window Tinting', items:[
+    {n:'Carbon Series',         s:'99.9% UV block · colour stable',                 p:'POA'},
+    {n:'Nano Ceramic',          s:'2mil nano-hybrid · 79% IR blocked',              p:'POA'},
+    {n:'Ceramic Hybrid',        s:'85% selective IR · no mirror effect',            p:'POA'},
+    {n:'Ceramic IR',            s:'Advanced SIRR · 94% IR blocked · premium',       p:'POA'},
+  ]},
+  { cat:'Ceramic Coating', items:[
+    {n:'Hydro Shield',          s:'EXO V2 · 2-year protection · 1 day',             p:'$699'},
+    {n:'Crystal Armour',        s:'Serum Light + EXO · 5-year · 1–2 days',         p:'$999'},
+    {n:'Ultra Defence',         s:'Serum Ultra 10H · 9-year · 2–3 days',           p:'$1,399'},
+    {n:'Interior Protection',   s:'Stain & UV defence · same day',                  p:'$399'},
+  ]},
+  { cat:'Paint Protection Film (PPF)', items:[
+    {n:'PPF Essentials',        s:'Door cups, screen, scuff plates · same day',     p:'$299'},
+    {n:'High Wear Protection',  s:'+ headlights & B-pillars · same day',            p:'$699'},
+    {n:'Partial Front End PPF', s:'Bumper + bonnet · 2–3 days',                    p:'$1,999'},
+    {n:'Full Front End PPF',    s:'Bumper + bonnet + fenders · 3–4 days',          p:'$3,399'},
+    {n:'Full Body PPF',         s:'Every painted panel · 4–5 days',                p:'$4,999'},
+  ]},
+  { cat:'Vehicle Wraps & Graphics', items:[
+    {n:'Full Colour Change Wrap',s:'Gloss, matte or satin finish',                  p:'POA'},
+    {n:'Supercar / Exotic Wrap', s:'Precision install · exclusive finishes',         p:'POA'},
+    {n:'Panel Wrap',            s:'Roof, bonnet, mirrors, trim accents',            p:'POA'},
+    {n:'Decals & Custom Graphics',s:'Business branding · fleet signage',            p:'POA'},
+    {n:'Race Stripes & Accents',s:'Performance styling · custom alignment',         p:'POA'},
+  ]},
+  { cat:'Blackout Packages', items:[
+    {n:'Chrome Delete',         s:'Window surrounds, bumper trims, accents',        p:'POA'},
+    {n:'Smoked Lights',         s:'Headlight & tail light tinting',                 p:'POA'},
+    {n:'Badge Blackout',        s:'Manufacturer emblems · stealth look',            p:'POA'},
+    {n:'Exterior Trim Blackout',s:'Mirrors, door handles, vents, mouldings',        p:'POA'},
+    {n:'Wheels & Grilles Blackout',s:'Powder coating or paint',                     p:'POA'},
+  ]},
+  { cat:'Wheels & Tyres', items:[
+    {n:'Everyday Street — 16"', s:'Sedans & hatchbacks · fitted & balanced',        p:'$1,600+'},
+    {n:'Everyday Street — 17"', s:'Sedans & hatchbacks · fitted & balanced',        p:'$1,700+'},
+    {n:'Premium Street — 18"',  s:'Modern sedans, luxury SUVs',                     p:'$1,800+'},
+    {n:'Premium Street — 19"',  s:'Modern sedans, luxury SUVs',                     p:'$2,000+'},
+    {n:'Premium Street — 20"',  s:'Modern sedans, luxury SUVs',                     p:'$2,200+'},
+    {n:'Off-Road Build — 17"',  s:'4x4s, utes, touring rigs · AT/MT tyres',        p:'$2,999+'},
+    {n:'Off-Road Build — 18"',  s:'4x4s, utes, touring rigs · AT/MT tyres',        p:'$3,399+'},
+    {n:'Off-Road Build — 20"',  s:'4x4s, utes, touring rigs · AT/MT tyres',        p:'$3,699+'},
+  ]},
+  { cat:'Car Accessories', items:[
+    {n:'Interior Accessories',  s:'Seat covers, mats, dash protection, lighting',   p:'POA'},
+    {n:'Exterior Accessories',  s:'Roof racks, deflectors, side steps, styling',    p:'POA'},
+    {n:'Lighting Upgrades',     s:'LED, ambient, off-road, custom',                 p:'POA'},
+    {n:'Technology Accessories',s:'Dash cams, parking sensors, cameras',            p:'POA'},
+  ]},
+];
+
+const svcList = document.getElementById('svcList');
+SVCS.forEach((cat, ci) => {
+  const wrap = document.createElement('div');
+  wrap.className = 'svc-cat';
+  wrap.innerHTML = `
+    <div class="cat-hdr" id="ch${ci}" onclick="toggleCat(${ci})">
+      <div class="cat-title">
+        <div class="cat-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        ${cat.cat}
+        <span class="cat-badge" id="cb${ci}">0</span>
+      </div>
+      <svg class="cat-chev" id="cc${ci}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="cat-body" id="catb${ci}">
+      ${cat.items.map((item, ii) => `
+        <div class="svc-row" id="sr${ci}_${ii}" onclick="svcClick(${ci},${ii})">
+          <div class="svc-l">
+            <input type="checkbox" class="svc-cb" id="s${ci}_${ii}" onclick="event.stopPropagation();svcChg(${ci},${ii})" onchange="svcChg(${ci},${ii})">
+            <div>
+              <div class="svc-n">${item.n}</div>
+              <div class="svc-s">${item.s}</div>
+            </div>
+          </div>
+          <div class="svc-p">${item.p}</div>
+        </div>`).join('')}
+    </div>`;
+  svcList.appendChild(wrap);
+});
+
+function toggleCat(ci) {
+  const h = document.getElementById('ch'+ci);
+  const b = document.getElementById('catb'+ci);
+  const c = document.getElementById('cc'+ci);
+  const isOpen = b.classList.contains('open');
+  h.classList.toggle('open', !isOpen);
+  b.classList.toggle('open', !isOpen);
+  c.classList.toggle('open', !isOpen);
+}
+function svcClick(ci, ii) {
+  const cb = document.getElementById(`s${ci}_${ii}`);
+  cb.checked = !cb.checked;
+  svcChg(ci, ii);
+}
+function svcChg(ci, ii) {
+  const cb = document.getElementById(`s${ci}_${ii}`);
+  document.getElementById(`sr${ci}_${ii}`).classList.toggle('checked', cb.checked);
+  let n = 0;
+  SVCS[ci].items.forEach((_, i) => { if (document.getElementById(`s${ci}_${i}`)?.checked) n++; });
+  const badge = document.getElementById('cb'+ci);
+  badge.style.display = n > 0 ? 'inline-block' : 'none';
+  badge.textContent = n;
+}
+function getSelectedSvcs() {
+  const out = [];
+  SVCS.forEach((cat, ci) => cat.items.forEach((item, ii) => {
+    if (document.getElementById(`s${ci}_${ii}`)?.checked) out.push(item.n);
+  }));
+  return out;
+}
+
+// ── BILLING ──────────────────────────────────────────────────────────────────
+function calcGST() {
+  const s = parseFloat(document.getElementById('subtotal').value) || 0;
+  const g = +(s * 0.1).toFixed(2);
+  const t = +(s + g).toFixed(2);
+  document.getElementById('billingBox').style.display = s > 0 ? 'block' : 'none';
+  document.getElementById('t-sub').textContent = 'A$' + s.toFixed(2);
+  document.getElementById('t-gst').textContent = 'A$' + g.toFixed(2);
+  document.getElementById('t-total').textContent = 'A$' + t.toFixed(2);
+}
+
+// ── NAVIGATION ───────────────────────────────────────────────────────────────
+let curPage = 1;
+
+function v(id) { return (document.getElementById(id)?.value || '').trim(); }
+function showErr(id, show) {
+  const e = document.getElementById('e-' + id);
+  if (e) e.classList.toggle('show', show);
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 4000);
+}
+
+function validateP1() {
+  const reqs = ['clientName','phone','email','regNo','year','make','model'];
+  let ok = true;
+  reqs.forEach(f => { const bad = !v(f); showErr(f, bad); if (bad) ok = false; });
+  if (!ok) showToast('Please fill in all required fields.');
+  return ok;
+}
+
+function goTo(p) {
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById('page'+i).style.display = i === p ? 'block' : 'none';
+    const sp = document.getElementById('sp'+i);
+    sp.classList.remove('active','done');
+    if (i === p) sp.classList.add('active');
+    if (i < p) sp.classList.add('done');
+  }
+  document.getElementById('progFill').style.width = (p / 3 * 100) + '%';
+  curPage = p;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function jumpTo(p) {
+  if (p > curPage) { if (curPage === 1 && !validateP1()) return; }
+  goTo(p);
+}
+function next(from) {
+  if (from === 1 && !validateP1()) return;
+  goTo(from + 1);
+}
+
+// ── AGREE ROWS ───────────────────────────────────────────────────────────────
+function togAgree(cbId, rowId) {
+  const cb = document.getElementById(cbId);
+  cb.checked = !cb.checked;
+  document.getElementById(rowId).classList.toggle('checked', cb.checked);
+}
+
+// ── SIGNATURE ────────────────────────────────────────────────────────────────
+const canvas = document.getElementById('sigCanvas');
+const ctx = canvas.getContext('2d');
+let drawing = false;
+
+function resizeCanvas() {
+  const w = canvas.parentElement.clientWidth;
+  canvas.width = w;
+  canvas.height = 90;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+function getPos(e) { const r = canvas.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; }
+function getTPos(e) { const r = canvas.getBoundingClientRect(); const t = e.touches[0]; return [t.clientX - r.left, t.clientY - r.top]; }
+
+function startDraw(x, y) {
+  drawing = true;
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+}
+function draw(x, y) {
+  if (!drawing) return;
+  ctx.lineTo(x, y);
+  ctx.strokeStyle = '#111111';
+  ctx.lineWidth = 1.8;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.stroke();
+  document.getElementById('sigHint').style.display = 'none';
+}
+
+canvas.addEventListener('mousedown', e => startDraw(...getPos(e)));
+canvas.addEventListener('mousemove', e => draw(...getPos(e)));
+canvas.addEventListener('mouseup', () => { drawing = false; });
+canvas.addEventListener('mouseleave', () => { drawing = false; });
+canvas.addEventListener('touchstart', e => { e.preventDefault(); startDraw(...getTPos(e)); }, { passive: false });
+canvas.addEventListener('touchmove', e => { e.preventDefault(); draw(...getTPos(e)); }, { passive: false });
+canvas.addEventListener('touchend', () => { drawing = false; });
+
+function clearSig() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  document.getElementById('sigHint').style.display = '';
+}
+
+// ── SUBMIT ───────────────────────────────────────────────────────────────────
+async function submitForm() {
+  const sigNameVal = v('sigName');
+  if (!sigNameVal) { showErr('sigName', true); showToast('Please enter the signed-by name.'); return; }
+  showErr('sigName', false);
+
+  const a1 = document.getElementById('a1').checked;
+  const a2 = document.getElementById('a2').checked;
+  const a3 = document.getElementById('a3').checked;
+  if (!a1 || !a2 || !a3) {
+    document.getElementById('e-agree').classList.add('show');
+    showToast('Please tick all three agreement boxes.');
+    document.getElementById('a1').scrollIntoView({ block: 'center', behavior: 'smooth' });
+    return;
+  }
+  document.getElementById('e-agree').classList.remove('show');
+
+  const selectedSvcs = getSelectedSvcs();
+  const sub = parseFloat(document.getElementById('subtotal').value) || 0;
+  const gst = +(sub * 0.1).toFixed(2);
+  const total = +(sub + gst).toFixed(2);
+  const orderNo = v('orderNo') || 'JOB-' + Date.now().toString().slice(-6);
+
+  const data = {
+    timestamp: new Date().toISOString(),
+    orderNo, clientName: v('clientName'), phone: v('phone'), email: v('email'),
+    regNo: v('regNo'), licNo: v('licNo'), loanCar: v('loanCar'), driverName: v('driverName'),
+    dateTaken: v('dateTaken'), dateReceived: v('dateReceived'),
+    year: v('year'), make: v('make'), model: v('model'), color: v('color'),
+    mileage: v('mileage'), plate: v('plate'), intCondition: v('intCond'), vin: v('vin'),
+    dmgZones: getZoneDmg(), dmgNotes: v('dmgNotes'),
+    staffName: v('staffName'), custPresent: v('custPresent'),
+    services: selectedSvcs.join(', '), svcNotes: v('svcNotes'),
+    subtotal: sub.toFixed(2), gst: gst.toFixed(2), total: total.toFixed(2),
+    payMethod: v('payMethod'), agreedToTerms: 'Yes',
+    sigName: sigNameVal, sigDate: v('sigDate'),
+  };
+
+  const btn = document.getElementById('submitBtn');
+  btn.classList.add('loading');
+  btn.innerHTML = '<div class="spin"></div> Submitting...';
+
+  try {
+    await fetch(SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+  } catch (e) {}
+
+  await new Promise(r => setTimeout(r, 1400));
+
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById('page'+i).style.display = 'none';
+    const sp = document.getElementById('sp'+i);
+    sp.classList.remove('active');
+    sp.classList.add('done');
+  }
+  document.getElementById('progFill').style.width = '100%';
+  document.getElementById('successWrap').classList.add('show');
+  document.getElementById('successOrderNo').textContent = orderNo;
+
+  document.getElementById('sumGrid').innerHTML = [
+    ['Order no.', orderNo],
+    ['Customer', data.clientName],
+    ['Phone', data.phone],
+    ['Email', data.email],
+    ['Vehicle', `${data.year} ${data.make} ${data.model}`],
+    ['Registration', data.regNo],
+    ['Services', selectedSvcs.length > 0 ? selectedSvcs.length + ' service(s)' : 'None selected'],
+    ['Total (A$)', total > 0 ? 'A$' + total.toFixed(2) : '—'],
+    ['Payment', data.payMethod || '—'],
+    ['Signed by', sigNameVal],
+  ].map(([l, val]) => `<div class="sum-item"><div class="sum-lbl">${l}</div><div class="sum-val">${val || '—'}</div></div>`).join('');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── RESET ────────────────────────────────────────────────────────────────────
+function resetAll() {
+  document.querySelectorAll('input[type=text], input[type=email], input[type=tel], input[type=number], input[type=date], input[type=datetime-local], textarea, select')
+    .forEach(el => el.value = '');
+  document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
+  document.querySelectorAll('.ctag').forEach(t => t.classList.remove('on'));
+  document.querySelectorAll('.cat-badge').forEach(b => { b.style.display = 'none'; b.textContent = '0'; });
+  document.querySelectorAll('.svc-row').forEach(r => r.classList.remove('checked'));
+  document.querySelectorAll('.agree-row').forEach(r => r.classList.remove('checked'));
+  document.querySelectorAll('.err').forEach(e => e.classList.remove('show'));
+  document.getElementById('billingBox').style.display = 'none';
+  document.getElementById('successWrap').classList.remove('show');
+  const btn = document.getElementById('submitBtn');
+  btn.classList.remove('loading');
+  btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Submit to Google Sheets';
+  clearSig();
+  goTo(1);
+}
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+document.getElementById('sigDate').value = new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>
